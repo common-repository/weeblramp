@@ -1,0 +1,101 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Global HTML CSS
+*
+**************************************/
+body {
+  font-family: @fonts-page;
+  font-size: 16px;
+  line-height: 1.8;
+  background: @colors-background-page;
+  color: @colors-text-page;
+}
+
+.wbamp-body-background {
+  margin: 0 auto;
+  max-width: @content-max-width;
+  background: @colors-background-content;
+  padding-bottom: 2rem;
+}
+
+blockquote {
+  padding: 16px;
+  margin: 8px 0 24px 0;
+  border-left: 2px solid @colors-blockquote-border;
+  color: @colors-blockquote;
+  background: @colors-blockquote-background;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+pre {
+  white-space: normal;
+  overflow-x: auto;
+}
+
+/*************************************
+*
+* screen readers text - from WP
+*
+**************************************/
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+/*************************************
+*
+* Functional, generic
+*
+**************************************/
+.wbl-txt-center {
+  text-align: center;
+}
+
+.wbl-no-margin {
+  margin: 0;
+}
+
+.wbl-block {
+  display: block;
+}
+
+.wbl-inline-block {
+  display: block;
+}
+
+.wbl-block-vert {
+  margin: 2rem 0;
+}
+
+.wbl-no-border {
+  border: none;
+}
+
+.wbl-hidden {
+  display: none;
+}
+
+.wbl-show {
+  display: inherit;
+}

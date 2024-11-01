@@ -1,0 +1,107 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Search form
+*
+**************************************/
+
+.wbamp-search-form {
+  width: 100%;
+  max-width: @content-max-width;
+  color: @colors-text-comments;
+  background: @colors-background-search;
+  font-family: @fonts-search;
+  text-align: center;
+
+  input[type="search"] {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    height: 2.5em;
+    min-width: 60%;
+    padding: 0 0.25em;
+    border: 1px solid #6E97CC;
+    //border-right: none;
+  }
+
+  label {
+    .wb-mx-dark-shadow;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background: #6E97CC;
+    margin-left: 0.5em;
+    padding: 0 1.5em;
+    &:hover {
+      background: #FFAC2F;
+    }
+    span {
+      height: 2.5em;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: 0.3em;
+      width: 1.2em;
+      height: 1.2em;
+    }
+  }
+
+  .wbamp-button-search {
+    display: none;
+  }
+}
+
+/*************************************
+*
+* Search box in accordion
+*
+**************************************/
+amp-accordion {
+  .wbamp-block.wbamp-search-form-wrapper {
+    margin-top: 0;
+  }
+  .wbamp-search-form {
+    margin-top: 0;
+    padding: 2rem 0;
+  }
+  .wbamp-search-header-bottom {
+    margin-bottom: 2rem;
+  }
+}
+
+/*************************************
+*
+* Search box in menu
+*
+**************************************/
+
+.wbamp-menu .wbamp-search-form {
+  background: transparent;
+}
+
+.wbamp-search-menu-top {
+  margin-bottom: 1em;
+}
+
+.wbamp-search-menu-bottom {
+  margin-top: 1em;
+}
+

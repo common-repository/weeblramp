@@ -1,0 +1,313 @@
+/**
+ * @ant_title_ant@
+ *
+ * @author       @ant_author_ant@
+ * @copyright    @ant_copyright_ant@
+ * @package      @ant_package_ant@
+ * @license      @ant_license_ant@
+ * @version      @ant_version_ant@
+ * @date        @ant_current_date_ant@
+ */
+
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+
+@phone: ~"only screen and (max-width: 479px)";
+@tablet: ~"only screen and (max-width: 767px)";
+
+@colors-sections-border: #ffac2f;
+@colors-description: #666;
+@colors-description-focused: #327dcb;
+@colors-border-preview: #ffac2f;
+@colors-na-this-edition: #985885;
+@colors-na-this-edition-hover: #00a0d2;
+@colors-na-this-edition-dimmed: #777777;
+
+/**
+* Settings
+*/
+
+// sections
+.wblib-settings-section {
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid @colors-sections-border;
+}
+
+.wblib-admin-section-icon svg {
+  height: 0.8em;
+  margin-right: 0.35em;
+  fill: #6E97CC;
+}
+
+// descriptions
+.wblib-settings-description,
+  // WP overrides
+.form-table td {
+  .wblib-settings-description {
+    max-width: 50em;
+  }
+
+  .wblib-settings-description.wblib-na-this-edition {
+    color: @colors-na-this-edition;
+  }
+
+  .wblib-settings-upgrade-icon,
+  .wblib-upgrade-description {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .wblib-settings-upgrade-icon svg {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5rem;
+    height: 1.2em;
+    margin-right: 0.35em;
+    fill: @colors-na-this-edition;
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  a.wblib-upgrade-link, a.wblib-upgrade-link:visited, a.wblib-upgrade-link:focus {
+    color: @colors-na-this-edition;
+  }
+
+  a.wblib-upgrade-link:hover {
+    color: @colors-na-this-edition-hover;
+  }
+
+  textarea.code,
+  textarea.code.regular-text {
+    width: 100%;
+    max-width: 50em;
+  }
+}
+
+.wblib-settings-description:hover,
+input:focus + .wblib-settings-description,
+textarea:focus + .wblib-settings-description {
+  color: @colors-description-focused;
+}
+
+.wblib-settings-doc-link a,
+  // WP overrides
+.form-table td p.wblib-settings-doc-link a {
+  color: @colors-description;
+  &:hover {
+    color: @colors-description-focused;
+  }
+}
+
+.form-table td fieldset.wblib-na-this-edition label,
+.form-table td span.wblib-na-this-edition {
+  color: @colors-na-this-edition-dimmed;
+  font-style: italic;
+}
+
+// media manager
+.wblib-media-setting-wrapper {
+  position: relative;
+}
+
+.wblib-image-preview {
+  position: absolute;
+  left: -200px;
+  top: 3em;
+  margin-left: 1em;
+  img {
+    max-width: 120px;
+    max-height: 120px;
+    border: 1px solid @colors-border-preview;
+  }
+  @media @tablet {
+    position: inherit;
+    display: block;
+    left: inherit;
+    top: inherit;
+    margin-left: 0;
+  }
+}
+
+// categories page selection
+label.wblib-settings-post-types,
+.wblib-settings-menus-title {
+  font-weight: 700;
+}
+
+.wblib-settings-categories,
+.wblib-settings-menus-options {
+  font-size: 0.85em;
+
+  input[type=checkbox] {
+    transform: scale(0.85);
+  }
+}
+
+.wblib-settings-menus-options {
+  margin-top: 0.75em;
+}
+
+// menu selection
+.wblib-settings-menus-slug {
+  margin-left: 0.5em;
+  font-size: 0.85em;
+  font-weight: 400;
+  color: @colors-description;
+}
+
+// ajax result message
+.wbamp-ajax-response-msg {
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: top;
+  div {
+    display: inline-block;
+  }
+}
+
+.wbamp-ajax-response-msg-success {
+  color: #46b450;
+  font-weight: 400;
+}
+
+.wbamp-ajax-response-msg-failure {
+  color: #dc3232;
+  font-weight: 400;
+}
+
+// checkbox group, vertical layout
+label.wbamp-settings-checkbox-group-vertical,
+.form-table td fieldset label.wbamp-settings-checkbox-group-vertical {
+  display: block;
+}
+
+// generic
+.wblib-settings-level-0 {
+  margin-left: 2em;
+}
+
+.wblib-settings-level-1 {
+  margin-left: 4em;
+}
+
+.wblib-settings-level-2 {
+  margin-left: 6em;
+  label {
+    font-style: italic;
+  }
+}
+
+.wblib-settings-level-3 {
+  margin-left: 8em;
+}
+
+.wblib-settings-accordion {
+  h3 {
+    margin-left: 2em;
+    font-weight: normal;
+    font-size: inherit;
+  }
+}
+
+/**
+* Color picker
+*/
+.wp-color-result {
+  margin: 0 6px 0 0;
+}
+
+.wp-picker-container input[type="text"].wp-color-picker {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  width: 6em;
+}
+
+/**
+* Upgrade tab
+ */
+#upgrade.wbamp-settings-tab {
+  a, a:focus, a:hover, a:visited {
+    display: inline-block;
+    padding: 0.5em 1em 0.75em;
+    margin: 1em 0 0.5em;
+    font-size: 1.35em;
+    background: #985885;
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #703668;
+  }
+  ul {
+    padding-left: 2em;
+  }
+
+  li:before {
+    display: inline-block;
+    content: "+";
+    color: #7e3668;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-left: inherit;
+    width: inherit;
+  }
+}
+
+/**
+* Embedded help frame
+ */
+.wblib-settings-doc-frame-container {
+  width: 100%;
+  max-width: 50em;
+}
+
+.wblib-settings-doc-frame {
+  display: none;
+  width: 100%;
+  height: 300px;
+  max-width: 50em;
+  margin-top: 1em;
+  border: 1px solid @colors-border-preview;
+}
+
+div.wblib-settings-doc-link {
+  margin-top: 0.5em;
+}
+
+a.wblib-settings-doc-link {
+  font-size: 0.85em;
+}
+
+button.wblib-settings-doc-link {
+  display: inline-block;
+  font-size: 0.85em;
+  padding: 0.2em 0.75em;
+  margin: 0;
+  border-radius: 0.2em;
+  background: #fafafa;
+  color: #666;
+  text-decoration: none;
+  border: 1px solid #CCC;
+  box-shadow: 0 1px 0 #ccc;
+  cursor: pointer;
+  &:visited, &:focus, &:active, &:hover {
+    text-decoration: none;
+    outline: none;
+  }
+  &:hover {
+    background: #0085ba;
+    color: #FFFFFF;
+    border-color: #0073aa #006799 #006799;
+    box-shadow: 0 1px 0 #0085ba;
+  }
+}
+
+button.wblib-settings-doc-link.wblib-visible:before {
+  content: '\D7';
+  margin-right: 0.5em;
+}

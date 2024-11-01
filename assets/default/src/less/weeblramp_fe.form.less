@@ -1,0 +1,125 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Forms display
+*
+**************************************/
+form[method="post"] {
+  textarea, input, select {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #BBBBBB;
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-family: sans-serif;
+  }
+
+  input[type=radio],
+  input[type=checkbox]{
+    width: auto;
+  }
+
+  label {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  label.wbl-hidden {
+    display: none;
+  }
+
+  button[type="submit"],
+  input[type="submit"] {
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    margin: 2rem auto 0;
+    padding: 0.5em 2em;
+    font-size: 2em;
+    background: #6E97CC;
+    .wb-mx-dark-shadow;
+
+    &:hover {
+      background: #FFAC2F;
+    }
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li,
+  .wpforms-field,
+  .wbamp-content li {
+    list-style: none;
+    margin-bottom: 2rem;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  .wpforms-field-hp {
+    display: none;
+    position: absolute;
+    left: -9000px;
+  }
+
+  label.wpforms-field-label-inline {
+    width: auto;
+  }
+}
+
+// hide form after a successful submit
+form[method="post"].amp-form-submit-success > *:nth-child(n+3) {
+  display: none;
+}
+
+form[method="post"] .wbamp-form-status {
+  margin: 2rem -2rem;
+  padding: 2rem 10%;
+  text-align: center;
+  color: @colors-color-comments-status;
+  background: @colors-background-comments-status;
+
+  a, a:visited, a:focus {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    text-decoration: none;
+    background: @colors-background-comments-meta;
+  }
+
+  ul {
+    margin: 0;
+    padding: 1em 2rem 0;
+    text-align: left;
+    font-size: 0.9em;
+    border-top: 1px solid #327DCB;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+}
+
+/** GravityForms **/
+
+.gform_validation_container {
+  display: none;
+}

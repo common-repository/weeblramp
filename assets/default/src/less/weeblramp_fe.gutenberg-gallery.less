@@ -1,0 +1,50 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+
+/*************************************
+*
+* Gallery
+*
+**************************************/
+.wbamp-content .wp-block-gallery {
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 -8px;
+
+  li:before {
+    content: none;
+  }
+
+  .blocks-gallery-image, .blocks-gallery-item {
+    width: calc(100% / 2 - 16px);
+  }
+
+  .blocks-gallery-image, .blocks-gallery-item {
+    margin: 8px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .blocks-gallery-image figure, .blocks-gallery-item figure {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+}

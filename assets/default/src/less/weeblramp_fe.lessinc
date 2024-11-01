@@ -1,0 +1,308 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+
+@phone: ~"only screen and (max-width: 479px)";
+@tablet: ~"only screen and (max-width: 767px)";
+
+/*************************************
+*
+* Page/Global
+*
+**************************************/
+@content-max-width: '{wb_content_max_width\600px}';
+@fonts-page: 'Roboto', sans-serif;
+@colors-background-page: '{wb_colors_background_page\#F3F3F5}';
+@colors-background-body: #FFFFFF;
+@colors-text-page: '{wb_colors_text_page\#333333}';
+@colors-blockquote: #4f748e;
+@colors-blockquote-background: #e9eff3;
+@colors-blockquote-border: #87a6bc;
+@colors-border-default: '{wb_colors_border_default\#CDDEF5}';
+@colors-border-secondary: #DDDDDD;
+
+/*************************************
+*
+* Content
+*
+**************************************/
+@margin-content: 0 auto 0;
+@padding-content: 0;
+@fonts-content: '{wb_fonts_family_content\Roboto, sans-serif}';
+@fonts-size-content: '{wb_fonts_size_content\0.9em}';
+@colors-background-content: '{wb_colors_background_content\#FFFFFF}';
+@colors-text-content: '{wb_colors_text_content\#ffffff}';
+@colors-text-content-hover: '{wb_colors_text_hover_content\#327dcb}';
+
+// links
+@colors-text-content-a: '{wb_colors_text_content_link\#333333}';
+@colors-text-content-a-decoration: '{wb_decoration_content_link\underline}';
+@colors-text-content-a-hover: '{wb_colors_text_content_link_hover\#777777}';
+@colors-text-content-a-visited: '{wb_colors_text_content_link_visited\#333333}';
+
+// headings
+@fonts-content-h1: '{wb_fonts_family_heading_h1\Roboto, sans-serif}';
+@fonts-size-content-h1: '{wb_fonts_size_heading_h1\1.75em}';
+@colors-text-content-h1: '{wb_colors_text_heading_h1\#FFFFFF}';
+@colors-background-content-h1: '{wb_colors_background_heading_h1\#6E97CC}';
+
+@fonts-content-h2: '{wb_fonts_family_heading_h2\Roboto, sans-serif}';
+@fonts-size-content-h2: '{wb_fonts_size_heading_h2\1.35em}';
+@colors-text-content-h2: '{wb_colors_text_heading_h2\#333333}';
+@colors-background-content-h2: '{wb_colors_background_heading_h2\none}';
+
+@fonts-content-h3: '{wb_fonts_family_heading_h3\Roboto, sans-serif}';
+@fonts-size-content-h3: '{wb_fonts_size_heading_h3\1em}';
+@colors-text-content-h3: '{wb_colors_text_heading_h3\#111111}';
+@colors-background-content-h3: '{wb_colors_background_heading_h3\none}';
+
+// summary
+@colors-text-summary: '{wb_colors_text_content_summary\#777777}';
+
+/*************************************
+*
+* Generic button
+*
+**************************************/
+@button-padding: 0.75em 1.5em;
+@colors-button: #333333;
+@colors-button-hover: #FFFFFF;
+@colors-button-background: #6E97CC;
+@colors-button-background-hover: #327dcb;
+
+/*************************************
+*
+* Header
+*
+**************************************/
+@min-height-header: '{wb_min_height_header\5rem}';
+@fonts-header: '{wb_fonts_family_header\"Open Sans", sans-serif}';
+@fonts-size-header: '{wb_fonts_size_header\1.2em}';
+@colors-background-header: '{wb_colors_background_header\#6e97cc}';
+@colors-text-header: '{wb_colors_text_header\#FFFFFF}';
+@colors-text-header-tag-line: '{wb_colors_text_header_tag_line\#DDDDDD}';
+@image_background_header: '{wb_image_background_header\none}';
+@image_align_header: '{wb_image_align_header\table}';
+
+@margin-header: 0 auto;
+@padding-header: 2em 0.75em;
+
+/*************************************
+*
+* Footer
+*
+**************************************/
+@margin-footer: 0 auto;
+@padding-footer: 1em 0 1em;
+@min-height-footer: 0;
+@fonts-footer: 'Roboto', sans-serif;
+@fonts-size-footer: 0.8em;
+@colors-background-footer: #6e97cc;
+@colors-text-footer: #FFFFFF;
+@colors-text-footer-hover: #DDDDDD;
+
+/*************************************
+*
+* AMP tags
+*
+**************************************/
+@margin-amp-tag: 2rem 0 0;
+@padding-amp-tag: 0.25em 1em;
+
+/*************************************
+*
+* Menu
+*
+**************************************/
+@margin-menu: 0 auto 0;
+@padding-menu: 0.5em 5em 0 0.5em;
+@padding-menu-title: 0 0.25em 0 0.5em;
+@fonts-menu: 'Roboto', sans-serif;
+@fonts-menu-size: 0.8em;
+@colors-background-menu: #b6be9c;
+@colors-text-menu: #444444;
+@colors-text-title: #000000;
+@colors-border-title: #777777;
+@colors-background-menu-active: #327DCB;
+@colors-text-menu-active: #FFFFFF;
+@colors-background-menu-hover: #FFAC2F;
+@colors-text-menu-hover: #000000;
+
+/*************************************
+*
+* Menu button
+*
+**************************************/
+@menu-button-height: 2.5rem;
+@menu-min-width: 1vw;
+@colors-menu-button: #FFFFFF;
+@colors-menu-button-text-border: #FFFFFF;
+@colors-menu-button-hover: #FFAC2F;
+@colors-menu-button-background: transparent;
+@colors-menu-button-open: #000000;
+@colors-menu-button-close: #EEEEEE;
+@colors-menu-container-border: #898596;
+@menu-transition-duration: 0.2s;
+@menu-transition-close-duration: 0.5s;
+
+/*************************************
+*
+* Ad
+*
+**************************************/
+@margin-ad: 0 auto;
+@padding-ad: 1em 0;
+@fonts-ad: 'Roboto', sans-serif;
+@colors-background-ad: #FFFFFF;
+@colors-text-ad: #3d596d;
+
+/*************************************
+*
+* Carousel
+*
+**************************************/
+@margin-carousel-caption: 0;
+@max-height-carousel-caption: 25%;
+@padding-carousel-caption: 0.25em 1em;
+@fonts-carousel-caption: 'Roboto', sans-serif;
+@colors-background-carousel-caption: rgba(0, 0, 0, 0.6);
+@colors-text-carousel-caption: #FFFFFF;
+
+/*************************************
+*
+* Error page
+*
+**************************************/
+
+@fonts-error-title: @fonts-content;
+@colors-text-error-title: @colors-text-content;
+@colors-background-error-title: @colors-background-content;
+@fonts-error-size-title: 1.3em;
+
+@fonts-error-body: @fonts-content;
+@colors-text-error-body: #777777;
+@colors-background-error-body: @colors-background-content;
+@fonts-error-size-body: @fonts-size-content;
+
+@fonts-error-footer: @fonts-content;
+@colors-text-error-footer: #BBBBBB;
+@colors-background-error-footer: @colors-background-content;
+@fonts-error-size-footer: 0.8em;
+
+@image-background-error: url(http://lorempixel.com/350/200/nature);
+
+/*************************************
+*
+* Social buttons
+*
+**************************************/
+@margin-social-buttons: 0.25em auto;
+@colors-background-social-buttons: @colors-background-content;
+@colors-text-social-buttons: @colors-text-content;
+
+/*************************************
+*
+* Article info block
+*
+**************************************/
+@colors-background-info-block: inherit;
+@colors-text-info-block: #777777;
+@colors-text-info-block-hover: #333333;
+@colors-border-info-block: #CDDEF5;
+@fonts-info-block: 'Roboto', Serif;
+@fonts-size-info-block: 0.9em;
+@margin-info-block: 2em 0 1em;
+@padding-info-block: 0 0 0.5em;
+
+/*************************************
+*
+* Article comments
+*
+**************************************/
+@colors-background-comments: inherit;
+@colors-text-comments-title: #333333;
+@colors-text-comments: #555555;
+@colors-text-comments-hover: #333333;
+@colors-border-comments: #CDDEF5;
+@fonts-comments: 'Roboto', Serif;
+@fonts-size-comments: 1em;
+@fonts-size-comments-meta: 0.85em;
+@margin-comments: 2rem 0;
+@padding-comments: 0;
+@padding-comments-meta: 0.25em 1em;
+@colors-background-comments-meta: #CDDEF5;
+@colors-background-comments-status: #FFAC2F;
+@colors-color-comments-status: #333333;
+
+/*************************************
+*
+* Article author bio
+*
+**************************************/
+@colors-background-author-bio: inherit;
+@colors-text-author-bio: #777777;
+@colors-text-author-bio-hover: #333333;
+@colors-border-author-bio: #CDDEF5;
+@fonts-author-bio: 'Roboto', Serif;
+@fonts-size-author-bio: 0.9em;
+@margin-author-bio: 2rem 0 2rem;
+@padding-author-bio: 0;
+
+/*************************************
+*
+* Article readmore
+*
+**************************************/
+@colors-background-readmore: '{wb_colors_background_readmore\#B6BE9C}';
+@colors-text-readmore: '{wb_colors_text_readmore\#333333}';
+@colors-background-readmore-hover: '{wb_colors_background_readmore_hover\#FFAC2F}';
+@colors-text-readmore-hover: '{wb_colors_text_readmore_hover\#FFFFFF}';
+
+/*************************************
+*
+* Article multipage and pagination
+*
+**************************************/
+@fonts-pagination: Roboto, sans-serif;
+@fonts-pagination-size: 1em;
+@colors-background-page-links: '{wb_colors_background_page_links\#B6BE9C}';
+@colors-text-page-links: '{wb_colors_text_page_links\#333333}';
+@colors-background-page-links-current: '{wb_colors_background_page_links_current\#6E97CC}';
+@colors-text-page-links-current: '{wb_colors_text_page_links_current\#FFFFFF}';
+@colors-background-page-links-hover: '{wb_colors_background_page_links_hover\#FFAC2F}';
+@colors-text-page-links-hover: '{wb_colors_text_page_links_hover\#000000}';
+@colors-background-page-links-title: '{wb_colors_background_page_links_title\none}';
+@colors-text-page-links-title: '{wb_colors_text_page_links_title\#777777}';
+
+/*************************************
+*
+* Search
+*
+**************************************/
+@colors-text-comments: #555555;
+@colors-background-search: #FFFFFF;
+@fonts-search: 'Roboto', Serif;
+@fonts-size-search: 1em;
+
+/*************************************
+*
+* Mixins
+*
+**************************************/
+
+.wb-mx-dark-shadow {
+  box-shadow: 0 2px 3px rgba(0,0,0, 0.3);
+  border: none;
+  outline: 0px none;
+  &:active {
+    box-shadow: none;
+  }
+}

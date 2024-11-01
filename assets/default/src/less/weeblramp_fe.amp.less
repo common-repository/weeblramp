@@ -1,0 +1,49 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* AMP Specific
+*
+**************************************/
+.amp-wp-enforced-sizes {
+  /** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+  max-width: 100%;
+}
+
+.wbamp-amp-tag {
+  margin: @margin-amp-tag;
+  padding: @padding-amp-tag;
+  text-align: center;
+}
+
+amp-img,
+amp-anim {
+  display: block;
+  margin: 0 auto;
+}
+
+.wbamp-amp-tag.wbamp-carousel {
+  margin: 2rem 0 0;
+  padding: 0;
+  amp-img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+

@@ -1,0 +1,220 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+
+@phone: ~"only screen and (max-width: 479px)";
+@tablet: ~"only screen and (max-width: 767px)";
+
+@colors-sections-border: #ffac2f;
+@colors-description: #666;
+@colors-description-focused: #327dcb;
+
+/**
+* Settings
+*/
+
+// header
+.wrap.weeblramp-settings {
+  margin: 0;
+}
+
+h1.wbamp-settings-header {
+  background: #FFF;
+  vertical-align: bottom;
+  margin-left: -20px;
+  margin-bottom: 0.5em;
+  padding: 0.75em 0 0.75em 20px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  svg {
+    margin: 0;
+    max-height: 40px;
+  }
+
+  .wbamp-amp-logo,
+  .wbamp-weeblramp-logo,
+  .wbamp-edition-logo,
+  .wbamp-weeblramp-sep,
+  .wbamp-weeblramp-area {
+    display: inline-block;
+    line-height: 2rem;
+    vertical-align: baseline;
+  }
+
+  .wbamp-amp-logo {
+    float: right;
+    margin: 0 1em;
+  }
+  .wbamp-amp-logo svg {
+    height: 2rem;
+    fill: #327DCB;
+  }
+  .wbamp-weeblramp-logo svg {
+    height: 2rem;
+    vertical-align: bottom;
+  }
+  .wbamp-edition-logo svg {
+    height: 2rem;
+    vertical-align: bottom;
+    fill: #6E97CC;
+  }
+  .wbamp-weeblramp-sep {
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #FFAC2F;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0.25rem;
+    @media @tablet {
+      display: none;
+    }
+    .wbamp-community-area {
+      height: 2rem;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.wbamp-settings-tab {
+  padding-bottom: 5em;
+}
+
+// separator
+.form-table .wbamp-settings-separator th,
+.form-table .wbamp-settings-separator td {
+  padding: 0.5em 0;
+  hr {
+    margin: 0 0 0 0.5em;
+  }
+}
+
+// fixed submit button
+#wblib-settings-tabs p.submit {
+  position: fixed;
+  bottom: 3em;
+  padding: 1em 2em;
+  background: rgba(128, 128, 128, .4);
+  border-radius: 0.25em;
+  @media @tablet {
+    position: inherit;
+    padding: inherit;
+    background: inherit;
+    border-radius: 0;
+  }
+}
+
+.wrap h2.wblib-settings-section {
+  clear: both;
+  padding-top: 1.5em;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+#wblib-settings-tabs .nav-tab-wrapper li {
+  margin-bottom: 0;
+}
+
+/*------------------------------------------------------------------------------
+  25.0 - Tabbed Admin Screen Interface (Experimental)
+------------------------------------------------------------------------------*/
+
+.nav-tab {
+  float: left;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-left: 0.5em; /* half the font size so set the font size properly */
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  background: #e5e5e5;
+  color: #555;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+h3 .nav-tab, /* Back-compat for pre-4.4 */
+.nav-tab-small .nav-tab {
+  padding: 5px 14px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.nav-tab:hover,
+.nav-tab:focus {
+  background-color: #fff;
+  color: #444;
+}
+
+.nav-tab-active,
+.nav-tab:focus:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.nav-tab-active {
+  margin-bottom: -1px;
+  color: #444;
+}
+
+.nav-tab-active,
+.nav-tab-active:hover,
+.nav-tab-active:focus,
+.nav-tab-active:focus:active {
+  border: 1px solid #FFAC2F;
+  background: #FFAC2F;
+  color: #000;
+  box-shadow: none;
+}
+
+.nav-tab-wrapper,
+h1.nav-tab-wrapper, /* Back-compat for pre-4.4 */
+.wrap h2.nav-tab-wrapper, /* higher specificity to override .wrap > h2:first-child */
+h3.nav-tab-wrapper {
+  border-bottom: 1px solid #FFAC2F;
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 0;
+  line-height: inherit;
+}
+
+/* Back-compat for plugins. Deprecated. Use .wp-clearfix instead. */
+.nav-tab-wrapper:not(.wp-clearfix):after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ie8 .nav-tab-wrapper {
+  /* contain floats establishing a new block formatting context */
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+/* Smartphone */
+@media screen and (max-width: 600px) {
+
+  h1.nav-tab-wrapper,
+  .wrap h2.nav-tab-wrapper,
+  h3.nav-tab-wrapper {
+    border-bottom: 0;
+  }
+
+  h1 .nav-tab,
+  h2 .nav-tab,
+  h3 .nav-tab {
+    margin: 10px 10px 0 0;
+    border-bottom: 1px solid #ccc;
+  }
+}

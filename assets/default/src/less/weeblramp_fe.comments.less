@@ -1,0 +1,199 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Comments display
+*
+**************************************/
+
+.wbamp-comments {
+  color: @colors-text-comments;
+  background: @colors-background-comments;
+  font-family: @fonts-comments;
+  font-size: @fonts-size-comments;
+  margin: @margin-comments;
+  padding: @padding-comments;
+
+  .comments-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+    color: @colors-text-comments-title;
+    padding-top: 2rem;
+  }
+
+  ul {
+    margin: 2rem 0;
+  }
+
+  ul.comment-list {
+    padding: 0;
+  }
+
+  ul.children {
+    padding: 0 0 0 3em;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 2rem;
+    &:before {
+      content: none;
+    }
+  }
+
+  a, a:visited, a:focus {
+    color: @colors-text-comments;
+  }
+
+  a:hover {
+    color: @colors-text-comments-hover;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .no-comments {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .comment-meta {
+    display: table;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: @padding-comments-meta;
+    background: @colors-background-comments-meta;
+  }
+
+  .comment-author {
+    display: table-cell;
+    vertical-align: bottom;
+    b.fn, .says {
+      font-weight: 700;
+    }
+    amp-img {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0.25em 0.75em 0 0;
+    }
+  }
+
+  .comment-metadata {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: right;
+    font-size: @fonts-size-comments-meta;
+    color: @colors-text-comments;
+    a, a:visited, a:focus {
+      color: @colors-text-comments;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: @colors-text-comments-hover;
+      text-decoration: none;
+    }
+  }
+
+  .comment-content {
+    padding-top: 1em;
+    clear: both;
+  }
+
+  .nav-links {
+    margin-bottom: 2rem;
+    color: @colors-text-comments;
+    text-align: center;
+    a, a:visited, a:focus {
+      color: @colors-text-comments;
+    }
+
+    a:hover {
+      color: @colors-text-comments-hover;
+    }
+  }
+
+  .nav-links {
+    display: table;
+    width: 100%;
+  }
+
+  .nav-previous, .nav-next {
+    display: table-cell;
+  }
+  .nav-previous {
+    text-align: left;
+  }
+  .nav-next {
+    text-align: right;
+  }
+
+  // leave a comment form
+  .comment-respond {
+
+    .logged-in-as {
+      display: none;
+    }
+
+    .comment-notes {
+      text-align: center;
+    }
+  }
+
+  .comment-awaiting-moderation {
+    position: absolute;
+    right: 1em;
+    font-size: @fonts-size-comments-meta;
+    font-weight: bold;
+  }
+
+  .reply {
+    text-align: right;
+    font-size: @fonts-size-comments-meta;
+    a, a:visited, a:focus {
+      color: @colors-text-comments;
+    }
+
+    a:hover {
+      color: @colors-text-comments-hover;
+    }
+  }
+
+  div.wbamp-leave-comment {
+    text-align: center;
+    margin: 2rem 0 0;
+    box-sizing: border-box;
+  }
+
+  a.wbamp-leave-comment,
+  a.wbamp-leave-comment:visited,
+  a.wbamp-leave-comment:focus {
+    display: inline-block;
+    padding: 0.5em 2em;
+    font-size: 1.5em;
+    background: #6E97CC;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    &:hover {
+      background: #FFAC2F;
+    }
+  }
+}
+

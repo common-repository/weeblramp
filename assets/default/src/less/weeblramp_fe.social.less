@@ -1,0 +1,198 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Social buttons
+*
+**************************************/
+
+.wbamp-block + .wbamp-block.wbamp-social-buttons {
+  padding: 2rem 0 0;
+}
+
+.wbamp-social-buttons {
+  padding-left: 0;
+  padding-right: 0;
+  background: @colors-background-social-buttons;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.wbamp-content .wbamp-social-buttons {
+  font-size: 1rem;
+}
+
+.wbamp-social-buttons {
+
+  ul {
+    list-style: none;
+    line-height: 2.2;
+    margin: @margin-social-buttons;
+    padding: 0.2em 0;
+  }
+
+  li {
+    list-style: none;
+    &:before {
+      content: none;
+    }
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0.1em;
+    margin: 0;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.35em;
+  }
+  a {
+    line-height: 1.8;
+  }
+}
+
+.wbamp-social-buttons.wbamp-rounded {
+  span {
+    border-radius: 50%;
+  }
+}
+
+.wbamp-social-buttons.wbamp-squared {
+  span {
+    border-radius: 0.2em;
+  }
+}
+
+.wbamp-social-icon {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  svg {
+    vertical-align: middle;
+  }
+}
+
+// colored theme
+.wbamp-icons-colors {
+  & .wbamp-social-icon {
+    fill: @colors-text-social-buttons;
+  }
+  & .wbamp-social-icon:hover {
+    fill: #333333;
+  }
+  & .wbamp-facebook {
+    background: #3067a3;
+  }
+  & .wbamp-twitter {
+    background: #03B3EE;
+  }
+  & .wbamp-linked-in {
+    background: #0071a1;
+  }
+  & .wbamp-pinterest {
+    background: #BD081C;
+  }
+  & .wbamp-whatsapp {
+    background: #25D366;
+  }
+}
+
+// white theme
+.wbamp-icons-white {
+  & .wbamp-social-icon {
+    fill: #333333;
+  }
+  & .wbamp-social-icon:hover {
+    fill: #777777;
+  }
+  & .wbamp-facebook {
+    background: #FFFFFF;
+  }
+  & .wbamp-twitter {
+    background: #FFFFFF;
+  }
+  & .wbamp-linked-in {
+    background: #FFFFFF;
+  }
+  & .wbamp-pinterest {
+    background: #FFFFFF;
+  }
+  & .wbamp-whatsapp {
+    background: #FFFFFF;
+  }
+}
+
+// Dark theme
+.wbamp-icons-dark {
+  & .wbamp-social-icon {
+    fill: #FFFFFF;
+  }
+  & .wbamp-social-icon:hover {
+    background: #777777;
+  }
+  & .wbamp-facebook {
+    background: #333333;
+  }
+  & .wbamp-twitter {
+    background: #333333;
+  }
+  & .wbamp-linked-in {
+    background: #333333;
+  }
+  & .wbamp-pinterest {
+    background: #333333;
+  }
+  & .wbamp-whatsapp {
+    background: #333333;
+  }
+}
+
+// Dark theme
+.wbamp-icons-light {
+  & .wbamp-social-icon {
+    fill: #FFFFFF;
+  }
+  & .wbamp-social-icon:hover {
+    background: #333333;
+    fill: #FFFFFF;
+  }
+  & .wbamp-facebook {
+    background: #777777;
+  }
+  & .wbamp-twitter {
+    background: #777777;
+  }
+  & .wbamp-linked-in {
+    background: #777777;
+  }
+  & .wbamp-pinterest {
+    background: #777777;
+  }
+  & .wbamp-whatsapp {
+    background: #777777;
+  }
+}
+
+// whatsapp: only on mobile
+li.wbamp-social-button-whatsapp-share {
+  display: none;
+}
+
+@media @phone {
+  li.wbamp-social-button-whatsapp-share {
+    display: inline-block;
+  }
+}

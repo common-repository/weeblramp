@@ -1,0 +1,544 @@
+                              weeblrAMP changelog                               
+
+                        (2020-05-19 17:03 - build #783)                         
+
+
+
+--------------------------------------------------------------------------------
+ [ 2020-05-19 ] Version 1.12.5
+--------------------------------------------------------------------------------
+
+
+    [bug]    Fatal error when using Yoast 14+ and no company logo is set in
+             weeblrAMP settings
+
+
+--------------------------------------------------------------------------------
+ [ 2020-05-19 ] Version 1.12.4
+--------------------------------------------------------------------------------
+
+
+    [chg]    From WooCommerce 4.0, error messages when adding to cart have a
+             different format.
+    [chg]    Added support for Yoast 14.0
+    [chg]    Hide WPForms spinner
+
+    [bug]    Cannot use automatic Disqus support when using the new, shortest
+             access key
+
+
+--------------------------------------------------------------------------------
+ [ 2020-04-01 ] Version 1.12.3
+--------------------------------------------------------------------------------
+
+
+    [bug]    Cannot one-click update full version since update key length
+             change
+
+
+--------------------------------------------------------------------------------
+ [ 2020-04-01 ] Version 1.12.2
+--------------------------------------------------------------------------------
+
+
+    [bug]    WooCommerce variations selectors may not work for all attributes
+             if they have mixed upper/lower case.
+
+
+--------------------------------------------------------------------------------
+ [ 2020-04-01 ] Version 1.12.1
+--------------------------------------------------------------------------------
+
+
+    [chg]    Make sure WooCommerce products variations can be used on sites
+             with non-latin characters used in variations name.
+    [chg]    Default text color for sharing buttons changed to white
+    [chg]    Large French translation update
+    [chg]    If theme is disabled on AMP pages, product reviews may not be
+             displayed on WC > 3.3
+    [chg]    Adjusted to changes in Mailchimp For WP API.
+    [chg]    Added 2 filters, weeblramp_wc_review_author_html and
+             weeblramp_wc_review_date_time_html to customize display of author
+             and date/time on WooCommerce reviews
+
+    [bug]    WPForms detailed error message are not displayed on WPForms 1.5+
+    [bug]    When site theme is disabled on AMP pages, you should still be
+             able to use template overrides located in the theme
+    [bug]    Suppressed a few notices and warning under PHP 7.4
+    [bug]    After a change in active theme, customizations in
+             weeblramp/functions.php or template overrides may not be applied
+    [bug]    A couple of wrong actions documentation tags.
+
+
+--------------------------------------------------------------------------------
+ [ 2019-10-01 ] Version 1.12.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Now adding a robots meta tag for all pages to comply with new
+             Google/EU opt-in requirements to fully appear in search results
+    [new]    Added support for posts page as homepage
+    [new]    Support for WPForms forms
+    [new]    Google Tag Manager and Facebook Pixels are now part of the free
+             Community edition of weeblrAMP
+
+    [chg]    Now allowing password and file input types on AMP forms, per AMP
+             specification.
+    [chg]    Added ugc and sponsored to the list of allowed rel attributes
+    [chg]    Removed direct support Amazon ads, should now be created as
+             custom ads
+    [chg]    Added support for AdSense auto format and full width attributes
+    [chg]    Place holder in search box cannot be translated
+
+    [bug]    PHP warnings may be displayed on some servers with
+             get_current_user disabled
+    [bug]    URL with extra characters after the amp suffix may sometimes be
+             rendered as valid while they should trigger a 404.
+    [bug]    Readmore links are not properly displayed when created as
+             Gutenberg blocks
+    [bug]    Show Tracked Events option only when Google Analytics is enabled,
+             not for Facebook Pixel - closes #149
+    [bug]    Possible PHP warnings on WooCommerce sites
+    [bug]    Some WooCommerce category pages may show a PHP warning
+    [bug]    Notice error from reference to publisher_id in meta tags which
+             should have been removed with Google+ support - closes #148
+
+
+--------------------------------------------------------------------------------
+ [ 2019-04-02 ] Version 1.11.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Removed support for Google+ across all plugins
+
+    [chg]    Site theme may not be disabled on AMP version if URL is not
+             accessed without trailing slash when it's supposed to have one
+    [chg]    Using more translated strings from WooCommerce for cart
+    [chg]    Handle gravityforms shortcodes as well as more usual gravityform
+             ones
+
+    [bug]    Do not include AggregateRating structured data on WooCommerce
+             pages when there's not rating yet
+    [bug]    Incorrect links to related products in WooCommerce AMP page
+             json+ld structured data
+
+
+--------------------------------------------------------------------------------
+ [ 2018-12-20 ] Version 1.10.3
+--------------------------------------------------------------------------------
+
+
+    [bug]    A warning may be displayed on all pages if WP_DEBUG is enabled
+             after updating to previous version, until configuration is saved
+             again.
+
+
+--------------------------------------------------------------------------------
+ [ 2018-12-08 ] Version 1.10.2
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+ [ 2018-12-05 ] Version 1.10.1
+--------------------------------------------------------------------------------
+
+
+    [new]    Added support for Bing AMP cache to all forms handling
+
+    [chg]    Now enforcing and cleaning attributes on amp-carousel elements
+             created by user
+
+
+--------------------------------------------------------------------------------
+ [ 2018-08-20 ] Version 1.10.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Added French translation
+    [new]    Added Spanish translation
+    [new]    Improved support WordPress and Gutenberg embeds for Facebook,
+             Twitter, Instagram, Meetup, Pinterest, SoundCloud, Tumblr, Vimeo
+             and Vine
+    [new]    Added CSS for Gutenberg image galleries
+    [new]    Added support for Facebook Pixel analytics
+    [new]    Can insert multiple amp-analytics tags from settings (required
+             filter or template override before)
+
+    [chg]    Updated mustache template library version to 0.2
+    [chg]    HR tags are not auto-closed
+    [chg]    Disabled autop processing on Beaverbuilder AMP content
+    [chg]    Added a weeblramp_wpautop_function filter to control the autop
+             process on AMP content
+
+    [bug]    Some WordPress embed handlers (youtube URLs) were not always
+             rendered in Gutenberg-generated content.
+    [bug]    Description may not be set on rare occasions in json-ld
+             structured data
+    [bug]    Document type may not be set correctly on rare occasions in
+             json-ld structured data
+    [bug]    Possible warning errors when a product has no term associated
+             with it on WooCommerce pages.
+    [bug]    PHP warning may appear with PHP 7.2+ when displaying post/page
+             with no links to other posts
+
+
+--------------------------------------------------------------------------------
+ [ 2018-05-16 ] Version 1.9.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Added integration for Elementor, to improve quality of support.
+    [new]    Added integration for BeaverBuilder, to improve quality of
+             support.
+    [new]    Added meta box to force/disable AMP per individual page, post,
+             product,... - close #139
+    [new]    Added support for WooCommerce variable products option selection
+             and add to cart.
+    [new]    Added a wrapCustomContent API method to prevent arbitrary content
+             to be converted or stripped
+
+    [chg]    Remove all wbamp-* shortcodes, even on pages that have been
+             marked specifically as non-amp by user.
+    [chg]    Possible warnings when using the Twentyfourteen theme on some
+             pages.
+    [chg]    Availability display now done with an amp-list, up to date also
+             when displayed on AMP Cache.
+
+    [bug]    Publisher image is removed due to incorrect image size validation
+
+
+--------------------------------------------------------------------------------
+ [ 2018-02-19 ] Version 1.8.2
+--------------------------------------------------------------------------------
+
+
+    [new]    Added an API shorthand method to wrap an AMP form in content
+
+    [chg]    Updated page image validation: json-ld page image must now be
+             1200px+ wide, have more than 800,000 pixels and be either a jpg,
+             png or gif.
+    [chg]    Removed fallback image management: page image must belong to
+             displayed page per AMP specification, so a fallback image should
+             not be used any longer.
+    [chg]    Now allowing most input element, per updated AMP specification.
+    [chg]    Disallow p, div and span as direct children of an amp-accordion
+    [chg]    Yoast SEO adds an aria-current attribute to pagination, which
+             breaks AMP validation
+
+    [bug]    Wrong Log files directory in the Logging level setting help text.
+    [bug]    Too many messages logged to internal library error log file, if
+             logging set to "Debugging"
+
+
+--------------------------------------------------------------------------------
+ [ 2017-11-13 ] Version 1.8.1
+--------------------------------------------------------------------------------
+
+
+    [chg]    Now allowing activation if insufficient write permissions prevent
+             installing our MU-plugin. A warning is displayed in control panel
+             instead.
+    [chg]    Limit max number of terms per taxonomy displayed when selecting
+             pages to AMPlify. Hosting with low max_user_input PHP setting may
+             otherwise truncate settings upon save.
+    [chg]    Adjust to change in Mailchimp sign-up form, human-detection
+             message was visible
+    [chg]    Removed outline around search icon when clicked
+    [chg]    Now highlighting selected menu item
+
+    [bug]    Sometimes, a 'Web property ID' missing warning is displayed in
+             admin if Google Tag manager is used, even if an ID has been
+             entered.
+
+
+--------------------------------------------------------------------------------
+ [ 2017-09-20 ] Version 1.8.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Added support for custom permalink /category/postname
+    [new]    Implemente Automattic amp_post_template_metadata filter, for
+             better compatibility with other plugins that provides custom AMP
+             metadata
+
+    [chg]    Added noindex,follow on AMP search results pages
+    [chg]    Now hiding "page" title in posts and pages pagination
+
+    [bug]    Tag or category restriction may not be complied with if weeblrAMP
+             configuration is not re-saved after tag or category has been
+             created
+    [bug]    Unfortunate removal of pagination for multipage posts and pages
+             in last version
+
+
+--------------------------------------------------------------------------------
+ [ 2017-09-08 ] Version 1.7.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Added support for AMP Analytics Client ID API - allows better
+             tracking of AMP pages
+
+    [chg]    AMP does not recommend a separate Analytics ID any more (with
+             Client ID API usage). Updated settings help.
+    [chg]    Improved display on empty categories, tags or archive
+    [chg]    Now reading again Analytics web property ID from Yoast, if
+             present
+
+    [bug]    Fatal error when using the "Disable all filters and shortcodes"
+             option
+    [bug]    Possible PHP warning, without consequence, on some admin-side
+             pages
+
+
+--------------------------------------------------------------------------------
+ [ 2017-09-05 ] Version 1.6.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Added automatic resizing of Publisher logo, when not complying
+             with AMP requirements - close #114
+
+    [chg]    Added small drop-shadow to all buttons.
+    [chg]    Visual customizer now also has help directly embedded in settings
+             page.
+    [chg]    CSS to prevent code HTML elements to be wider than page, without
+             scrollbars
+    [chg]    Possible fatal error if Automattic AMP plugin (or another AMP
+             plugin) is still active
+    [chg]    Now allowing expanded attribute on section element, required for
+             amp-accordion to display with one pane open
+    [chg]    Optimized embedded help, reduced ajax requests, smoother display
+    [chg]    Now defaulting to disabling the theme on AMP pages - close #119
+    [chg]    Added a configuration check for when Divi is part of the theme,
+             not installed as a plugin
+    [chg]    Configuration check for custom CSS now displayed on customizer
+
+    [bug]    Contact Form 7 forms may generate an AMP warning (not an error)
+             due to reCaptcha iframe not entirely removed
+
+
+--------------------------------------------------------------------------------
+ [ 2017-08-04 ] Version 1.5.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Amplify links in content based on their CSS class(es) - close
+             #118
+    [new]    Turned Link to main site feature into a general announcement box
+             feature - close #113
+
+    [chg]    Removed some strings from language files, that should not be
+             translated - close #116
+    [chg]    Disabling the theme on AMP pages is now an option, better
+             compatibility with sites with plugins embedded into the them -
+             close #117
+    [chg]    Added cover image size to header background image
+
+    [bug]    Notice error if a plugin with an integration is disabled
+
+
+--------------------------------------------------------------------------------
+ [ 2017-07-31 ] Version 1.4.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Documentation for each setting is now visible directly in the
+             admin (and still available on the weeblrPress website of course)
+             - close #110
+
+    [chg]    Do not always include amp-analytics script if an amp-notification
+             is included: can cause a validator warning - close #109
+
+    [bug]    Using the wbamp-no-widgets content shortcode can cause a fatal
+             error
+    [bug]    Documentation server misses www, causes a useless redirect
+
+
+--------------------------------------------------------------------------------
+ [ 2017-07-24 ] Version 1.3.1.552
+--------------------------------------------------------------------------------
+
+
+    [chg]    A few language strings were not in language file for translation.
+    [chg]    Prevent updates from wordpress.org when doing local development
+    [chg]    Added a check in theme plugins to be sure the main weeblrAMP
+             plugin version is high enough - close #102
+    [chg]    Removed unused code in WooCommerce integration, should be faster
+
+    [bug]    Avoid fatal error on servers where the PHP mbstring extension is
+             not available - close #107
+
+
+--------------------------------------------------------------------------------
+ [ 2017-07-23 ] Version 1.3.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Added support for Easy Digital Downloads
+    [new]    Added support for Mailchimp for WordPress - close #39
+    [new]    When a post slug is modified, make sure a 301 redirect also
+             happens between the old and new AMP version of the page
+             (WordPress already creates the redirect for the standard version
+             of the page)
+
+    [chg]    Use is_admin to detect admin pages in mu-plugin
+    [chg]    Added some space when social sharing buttons set wraps at lower
+             width
+    [chg]    Added description field to schema.org structured data - close #66
+    [chg]    Content selection: an item without a category is now selected if
+             post type is selected, even if there only some categories are
+             selected.
+    [chg]    WP comment form now has target="_top", to allow redirects after
+             commenting.
+    [chg]    Better CSS for hiding form and submit buttons after a successful
+             form submission.
+    [chg]    Added a button to download the custom Disqus relay file
+    [chg]    Accessibility, missing alt text on logo, missing value for menu
+             expand buttons
+
+    [bug]    Link to main site displayed as an AMP notification had to be
+             dismissed on each page, instead of just once.
+    [bug]    Social buttons area background does not use custom color set for
+             page background by user.
+    [bug]    Customizer link decoration style setting should not be a color
+             selector
+    [bug]    Canonical URL might be wrong on some amp pages when permalinks
+             are using trailing slashes.
+    [bug]    Unable to disable AMPlification of some taxonomies
+    [bug]    amp-ad script is added on WooCommerce pages, even if ads are
+             disabled - close #98
+    [bug]    WHen using amp-social-share instead of static buttons, Twitter
+             button is not displayed
+    [bug]    DoubleClick ads not displayed when inserted through a
+             tag/shortcode in content
+    [bug]    Possible fatal error when reading a jpg remote file dimensions
+
+
+--------------------------------------------------------------------------------
+ [ 2017-06-07 ] Version 1.2.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Automatically insert ads in content, based on paragraph breakdown
+
+    [chg]    Adjusted to changes in Contact Form 7 version 4.8 update, which
+             broke CF7 forms on AMP
+    [chg]    Added a "Do not show ads" option, to allow displaying ads only
+             with shortcodes or automatically inserted ads based on paragraphs
+             count
+
+
+--------------------------------------------------------------------------------
+ [ 2017-05-19 ] Version 1.1.1
+--------------------------------------------------------------------------------
+
+
+    [chg]    Nuke deprecation notices for missing comments.php file in theme
+             on AMP pages when WP_DEBUG is on.
+    [chg]    Now always using use_verbose_page_rules when handling taxonomies
+             and archives for Custom Post Types
+
+    [bug]    A few errors under PHP 5.3.x
+    [bug]    Fatal error when Polylang is running if TwentySeventeen theme is
+             active
+
+
+--------------------------------------------------------------------------------
+ [ 2017-05-18 ] Version 1.1.0
+--------------------------------------------------------------------------------
+
+
+    [new]    Now handling all WooCommerce permalinks structures, including
+             custom
+    [new]    Added automatic generation of a "name" schema.org field for
+             Recipe documents
+    [new]    Added a doc_name custom meta tag
+    [new]    Added customization option for choice of menu to display per
+             language.
+    [new]    Added Polylang support for posts, pages, archives
+
+    [chg]    Removed image dimensions parser code that required PHP 5.4+
+    [chg]    Avoid fatal error in MU plugin if user rename or move the
+             weeblrAMP plugin directory
+    [chg]    Now automatically adding AMP pagination handling for all enabled
+             product types
+    [chg]    Now entirely disabling theme and child theme on AMP pages, avoids
+             interferences in markup - #97
+    [chg]    Added back is_amp_endpoint() function, as provided by the
+             standard AMP plugin
+    [chg]    When a new category or taxonomy is created, allow AMPlification
+             for corresponding items, even if user has not explicitely set
+             them in weeblrAMP configuration
+    [chg]    Enforce page max width to be entered in pixels, AMP responsive
+             layout cannot work with other units
+    [chg]    Added a warning when MU-plugin cannot be installed during
+             activation (usually because of incorrect permissions on server)
+    [chg]    Now also setting the page URL when using Disqus comments, more
+             reliable page attribution when not using the official WordPress
+             Disqus plugin
+    [chg]    Trim Disqus endpoint before using, in case it has
+             leading/trailing spaces
+
+    [bug]    WooCommerce second and more pages on home page are not amplified
+    [bug]    Notice error if user has not yet saved whether to AMPlify a
+             specific term
+    [bug]    Home page may not be amplified, even if set to
+    [bug]    Make sure home link in WooCommerce breadcrumb is also AMPlified,
+             if set so in user configuration.
+    [bug]    Do not allow input type=button on forms
+    [bug]    Incorrect documentation for weeblramp_get_jsonld_data and
+             weeblramp_get_structured_data filters, missing one parameter
+    [bug]    Cannot change H3 tags font size, there is a hardcoded
+             font-size:0.9em in weeblrAMP CSS.
+    [bug]    Typo in documentation link
+    [bug]    Using PHP code incompatible with PHP 5.4, can cause fatal error
+             upon activation.
+    [bug]    WooCommerce Cart and Checkout pages are never AMP, should not
+             have an amphtml rel tag.
+    [bug]    AMP-only widgets may be displayed on non-AMP pages sometimes -
+             close #90
+    [bug]    Validation warning if wbamp-no-ads shortcode is used to disable
+             ads on a page, as amp-ad script is still included - closes #86
+
+
+--------------------------------------------------------------------------------
+ [ 2017-04-10 ] Version 1.0.3
+--------------------------------------------------------------------------------
+
+
+    [chg]    WooCommerce category pages are not AMP: workaround for WordPress
+             ticket 40393
+    [chg]    Prevent WooCommerce 3.0 deprecation messages when WP_DEBUG is
+             enabled - closes #82
+
+    [bug]    WooCommerce breadcrumb filter not applied, breadrcrumbs links are
+             not AMPlified
+    [bug]    Border attribute on table element can only have a value of
+
+
+--------------------------------------------------------------------------------
+ [ 2017-03-23 ] Version 1.0.2
+--------------------------------------------------------------------------------
+
+
+    [chg]    Now using schema.org/Product for WooCommerce product page, and
+             removed useless fieds (publisher, author, etc)
+    [chg]    Structured data: now defaulting to "Article" doc type for single
+             pages and "WebPage" for all others - closes #79
+    [chg]    Now disallowing schema.org/Blog itemtype for divs, can invalidate
+             structured data - closes #80
+
+
+--------------------------------------------------------------------------------
+ [ 2017-03-15 ] 1.0.1
+--------------------------------------------------------------------------------
+
+
+    [new]    Added support for Google Tag Manager
+
+    [chg]    Added "Tested" field in installation manifest
+    [chg]    Now using disable-session-states on amp-accordion - closes #73
+
+    [bug]    Wrong link to Customizer on plugins page quick links

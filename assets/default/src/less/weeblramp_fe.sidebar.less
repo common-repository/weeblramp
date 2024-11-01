@@ -1,0 +1,188 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Menu
+*
+**************************************/
+
+.wbamp-sidebar {
+  background: @colors-background-menu;
+}
+
+.wbamp-menu,
+.wbamp-sidebar .wbamp-menu {
+  margin: @margin-menu;
+  padding: @padding-menu;
+  font-family: @fonts-menu;
+  color: @colors-text-menu;
+  background: @colors-background-menu;
+  font-size: @fonts-menu-size;
+}
+
+.wbamp-sidebar .wbamp-menu {
+  min-width: @menu-min-width;
+  padding-right: 2.5em;
+  &.wbamp-right {
+    padding-right: 0;
+    padding-left: 2.5em;
+  }
+}
+
+.wbamp-menu,
+.wbamp-sidebar .wbamp-menu {
+  .wamp-menu-title {
+    color: @colors-text-title;
+    padding: @padding-menu-title;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0 1em;
+    margin: 0;
+  }
+
+  li a, li a:visited {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: @colors-text-menu;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    margin-right: -1em;
+  }
+
+  li a:hover,
+  li.current-menu-item a:hover {
+    background: @colors-background-menu-hover;
+    color: @colors-text-menu-hover
+  }
+
+  li.current-menu-item a {
+    background: @colors-background-menu-active;
+    color: @colors-text-menu-active
+  }
+
+  li ul {
+    padding: 0 0 0 1em;
+  }
+
+  li ul a,
+  li.current-menu-item ul a {
+    background: @colors-background-menu;
+    color: @colors-text-menu;
+    padding-left: 2em;
+    margin-left: -2em;
+  }
+
+}
+
+/*************************************
+*
+* Menu control
+*
+**************************************/
+
+.wbamp-sidebar-control {
+  position: absolute;
+  margin: 0 auto;
+  z-index: 100;
+  &.wbamp-right {
+    right: 0;
+  }
+}
+
+.wbamp-sidebar-button {
+  display: inline-block;
+  text-align: left;
+  height: @menu-button-height;
+  padding: 0.3em 0.5em;
+  margin: 0;
+  border: none;
+  color: @colors-menu-button;
+  background: @colors-menu-button-background;
+  border-radius: 0;
+
+  &:hover {
+    cursor: pointer;
+    outline: none;
+    color: @colors-menu-button-hover;
+  }
+
+  .menu-icon-text {
+    padding: 0.2em 0.35em;
+    border: 1px solid @colors-menu-button-text-border;
+    border-radius: 0.2em;
+  }
+
+  .menu-icon-bar {
+    display: block;
+    width: 1.5em;
+    height: 0.20em;
+    margin: 0;
+    padding: 0;
+    background-color: @colors-menu-button;
+    box-shadow: none;
+  }
+
+  &:hover .menu-icon-bar {
+    background-color: @colors-menu-button-hover;
+  }
+
+  .menu-icon-bar + .menu-icon-bar {
+    margin-top: 0.25em;
+  }
+}
+
+.wbamp-sidebar-button.menu-close {
+  position: absolute;
+  top: 0;
+  font-size: 1.75em;
+  line-height: 1.1em;
+  padding: 0.1em;
+  width: auto;
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+  background: transparent;
+  border-radius: 0.1em;
+  color: @colors-menu-button-close;
+  & .menu-close {
+    display: none;
+  }
+  &:hover {
+    color: @colors-menu-button-hover;
+  }
+}
+
+.wbamp-sidebar[side][open] {
+  & .menu-close {
+    display: block;
+  }
+}
+
+.wbamp-sidebar[side="left"] .wbamp-sidebar-button.menu-close {
+  right: 0.5em;
+}
+
+.wbamp-sidebar[side="right"] .wbamp-sidebar-button.menu-close {
+  left: 0.5em;
+}
+
+

@@ -1,0 +1,133 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Search icon
+*
+**************************************/
+.wbamp-dropdown-search {
+  max-width: @content-max-width;
+}
+
+.wbamp-dropdown-search.wbamp-header-bottom {
+  width: 100%;
+  margin: 0 auto -2rem;
+  .wbamp-control {
+    background: @colors-background-content;
+    svg {
+      fill: @colors-menu-button-hover;
+    }
+
+    svg:hover {
+      fill: #777777;
+    }
+  }
+}
+
+.wbamp-dropdown-search.wbamp-header-top {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 50%;
+  background: transparent;
+  .wbamp-control {
+    display: inline-block;
+  }
+  .wbamp-control, header {
+    background: transparent;
+  }
+  .wbamp-search {
+    margin: 0 0 0 -100%;
+  }
+}
+
+.wbamp-dropdown-search {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+
+  .wbamp-control {
+    text-align: right;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: 0.3em;
+      width: 1.2em;
+      height: 1.2em;
+      fill: @colors-menu-button;
+    }
+    &:hover svg {
+      fill: @colors-menu-button-hover;
+    }
+  }
+
+  button {
+    border: none;
+  }
+
+  header {
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0px none;
+    }
+  }
+
+  .search-close {
+    display: none;
+  }
+
+  section[expanded] .wbamp-control {
+    .search-open {
+      display: none;
+    }
+    .search-close {
+      display: inline-block;
+
+      font-size: 1.75em;
+      line-height: 1.1em;
+      padding: 0.1em;
+      width: auto;
+      height: auto;
+      text-align: center;
+      vertical-align: middle;
+      background: transparent;
+      color: @colors-menu-button-close;
+      &:hover {
+        color: @colors-menu-button-hover;
+      }
+    }
+    .wbamp-header-bottom.search-close {
+      color: @colors-text-menu-hover;
+      &:hover {
+        color: @colors-menu-button-hover;
+      }
+    }
+  }
+
+  .wbamp-search-form {
+    background: @colors-background-menu;
+  }
+}
+

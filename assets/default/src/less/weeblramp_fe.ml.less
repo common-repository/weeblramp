@@ -1,0 +1,86 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* Language switcher
+*
+**************************************/
+
+.wbamp-ml {
+  text-align: right;
+  margin: 0;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0.5em;
+  }
+}
+
+.wbamp-ml.wbamp-ml-names li {
+  display: block;
+}
+
+// remove list item icon
+.wbamp-content .wbamp-ml li:before {
+  content: '';
+  margin: 0;
+  font-size: inherit;
+}
+
+/*************************************
+*
+* Widget, content top and content bottom display
+*
+**************************************/
+
+.wbamp-ml.wbamp-ml-widget,
+.wbamp-ml.wbamp-ml-top,
+.wbamp-ml.wbamp-ml-bottom {
+  text-align: center;
+}
+
+.wbamp-ml.wbamp-ml-bottom ul {
+  margin-top: 2rem;
+}
+
+/*************************************
+*
+* Top of header
+*
+**************************************/
+
+.wbamp-ml.wbamp-ml-header-top {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 100;
+}
+
+/*************************************
+*
+* Bottom of header
+*
+**************************************/
+
+.wbamp-ml.wbamp-ml-header-bottom {
+  margin-bottom: -2rem;
+}
+
+

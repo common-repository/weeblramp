@@ -1,0 +1,362 @@
+/**
+ * weeblrAMP - Accelerated Mobile Pages for Wordpress
+ *
+ * @author       weeblrPress
+ * @copyright    (c) WeeblrPress - Weeblr,llc - 2020
+ * @package      AMP on WordPress - weeblrAMP CE
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.12.5.783
+ *
+ * 2020-05-19
+ */
+/*! Copyright WeeblrPress - Weeblr,llc @_YEAR_@ - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+@import 'weeblramp_fe.lessinc';
+
+/*************************************
+*
+* default markup styling: article info block
+*
+**************************************/
+.wbamp-content-item + .wbamp-content-item {
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+/*************************************
+*
+* article info block
+*
+**************************************/
+.wbamp-content {
+
+  .wbamp-info-block {
+    color: @colors-text-info-block;
+    background: @colors-background-info-block;
+    font-family: @fonts-info-block;
+    font-size: @fonts-size-info-block;
+    margin: @margin-info-block;
+    padding: @padding-info-block;
+    border-bottom: 1px solid @colors-border-info-block;
+  }
+
+  .wbamp-info-block a, .wbamp-info-block a:visited, .wbamp-info-block a:focus {
+    color: @colors-text-info-block;
+  }
+
+  .wbamp-info-block a:hover {
+    color: @colors-text-info-block-hover;
+  }
+
+  .wbamp-info-block p {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  .wbamp-info-block .wbamp-created-by .wbamp-author-image {
+    margin-right: 0.5em;
+  }
+
+  .wbamp-info-block amp-img {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+/*************************************
+*
+* article excerpt
+*
+**************************************/
+.wbamp-post-summary {
+  font-size: 1.2em;
+  margin: 1em 0 2em;
+  color: @colors-text-summary;
+  p {
+    margin: 0;
+  }
+}
+
+/*************************************
+*
+* article author bio
+*
+**************************************/
+
+.wbamp-author-bio {
+  color: @colors-text-author-bio;
+  background: @colors-background-author-bio;
+  font-family: @fonts-author-bio;
+  font-size: @fonts-size-author-bio;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.wbamp-author-bio-description {
+  display: table;
+}
+
+.wbamp-author-avatar {
+  display: table-cell;
+  vertical-align: middle;
+  border: none;
+}
+
+.wbamp-author-description {
+  display: table-cell;
+  vertical-align: baseline;
+  border: none;
+  font-size: 1em;
+}
+
+.wbamp-author-avatar + .wbamp-author-description {
+  padding-left: 1em;
+}
+
+.wbamp-author-link {
+  text-align: left;
+}
+
+/*************************************
+*
+* article featured image
+*
+**************************************/
+.wbamp-content {
+
+  .wbamp-featured-image {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+/*************************************
+*
+* default markup styling: article pagination
+*
+**************************************/
+.wbamp-navigation {
+
+  font-size: 1em;
+  padding: 0;
+
+  ul.pager.pagenav {
+    margin: 0;
+    padding: 8px; // allow for buttons drop shadow
+    overflow: auto;
+
+    li {
+      display: inline-block;
+      margin: 2rem 0 0;
+      &:before {
+        content: none;
+      }
+    }
+
+    li a {
+      float: right;
+      padding: 0.4em 1em;
+      text-decoration: none;
+      font-family: @fonts-pagination;
+      font-size: @fonts-pagination-size;
+      background: @colors-background-page-links;
+      color: @colors-text-page-links;
+      .wb-mx-dark-shadow;
+    }
+
+    li:hover a, li:hover a:visited, li:hover a:focus {
+      color: @colors-text-page-links-hover;
+      background: @colors-background-page-links-hover;
+    }
+
+    li.previous {
+      & a:before {
+        content: "\AB";
+        margin-right: 0.25em;
+        font-size: 1.5em;
+        line-height: 1;
+      }
+    }
+
+    li.next {
+      float: right;
+      & a:after {
+        content: "\BB";
+        margin-left: 0.25em;
+        font-size: 1.5em;
+        line-height: 1;
+      }
+    }
+  }
+
+  // multipage article pager
+  div.pager ul {
+    margin: 1em 0;
+    padding: 0;
+    font-size: 0.8em;
+    text-align: center;
+    li {
+      padding: 0.4em 1em;
+      display: inline-block;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // category blog pagination
+  div.pagination ul {
+    margin: 1em 0;
+    padding: 0;
+    font-size: 0.8em;
+    text-align: center;
+    li {
+      padding: 0.4em 1em;
+      display: inline-block;
+      a {
+        text-decoration: @colors-text-content-a-decoration;
+        &:visited {
+          color: @colors-text-content-a-hover;
+        }
+      }
+      span {
+        color: @colors-text-content-a-visited;
+      }
+    }
+  }
+}
+
+/*************************************
+*
+* default markup styling: multipage article and categories
+*
+**************************************/
+
+.wbamp-page-links,
+.navigation.pagination {
+  text-align: center;
+  margin: 2rem 0;
+  padding-top: 2rem;
+  a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    background: @colors-background-page-links;
+    color: @colors-text-page-links;
+    .wb-mx-dark-shadow;
+  }
+  a:visited {
+    color: @colors-text-page-links;
+  }
+  a:hover {
+    background: @colors-background-page-links-hover;
+    color: @colors-text-page-links-hover;
+  }
+}
+
+.wbamp-block-pagination .navigation.pagination {
+  padding-top: 0;
+}
+
+.wbamp-page-links > span,
+.navigation.pagination span.current {
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  background: @colors-background-page-links-current;
+  color: @colors-text-page-links-current;
+  .wb-mx-dark-shadow;
+}
+
+.wbamp-page-links .wbamp-page-links-title {
+  display: none;
+  padding: 0.5em;
+  margin: 0;
+  background: @colors-background-page-links-title;
+  color: @colors-text-page-links-title;
+}
+
+/*************************************
+*
+* default markup styling: readmore
+*
+**************************************/
+.wbamp-readmore {
+  width: 100%;
+  margin: 3rem 0 3rem;
+  text-align: center;
+  a.more-link {
+    text-decoration: none;
+    padding: 1em 3em;
+    background: @colors-background-readmore;
+    color: @colors-text-readmore;
+    .wb-mx-dark-shadow;
+    &:visited {
+      color: @colors-text-readmore;
+    }
+    &:hover {
+      background: @colors-background-readmore-hover;
+      color: @colors-text-readmore-hover;
+    }
+  }
+}
+
+/*************************************
+*
+* password protection
+*
+**************************************/
+.wbamp-pwd-btn {
+  text-align: center;
+}
+
+.wbamp-content a.wbamp-pwd-btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: @button-padding;
+  color: @colors-button;
+  background: @colors-button-background;
+  text-decoration: none;
+  .wb-mx-dark-shadow;
+  &:hover {
+    color: @colors-button-hover;
+    background: @colors-button-background-hover;
+  }
+}
+
+/*************************************
+*
+* default markup styling: readmore link
+*
+**************************************/
+.wbamp-content {
+
+  a.readmore, a.readmore:visited, a.readmore:focus,
+  p.readmore a.btn, p.readmore a.btn:visited, p.readmore a.btn:focus {
+    background: @colors-background-readmore;
+    color: @colors-text-readmore;
+    text-decoration: none;
+    padding: 0.25em 1em;
+    .wb-mx-dark-shadow;
+  }
+
+  a.readmore:hover, p.readmore a.btn:hover {
+    background: @colors-background-readmore-hover;
+    color: @colors-text-readmore-hover;
+  }
+
+  a.readmore[rel="prev"]:after, p.readmore a[rel="prev"]:after {
+    content: "\AB";
+    margin-right: 0.25em;
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  a.readmore[rel="next"]:after, p.readmore a[rel="next"]:after {
+    content: "\BB";
+    margin-left: 0.25em;
+    font-size: 1.5em;
+    line-height: 1;
+  }
+}
+
